@@ -5,7 +5,7 @@
 - 설치를 완료하면 다음과 같이 도커 이미지와 컨테이너를 확인 할 수 있습니다.
 
 ## 데이터 베이스 초기 설정
-- default DatabaseName: blog
+- Default DatabaseName: blog
 ```
 $ create database blog;
 ```
@@ -13,17 +13,18 @@ $ create database blog;
 ## 애플리케이션 서버 띄우기 - 도커 활용
 - 코드 받기
 ```
-$ git clone git@github.com:whatapdev/python-django-blog.git
+$ git clone https://github.com/whatap/python-django-blog.git
+```
+
+- 작업 디렉토리로 이동
+```
+$ cd python-django-blog
 ```
 
 - docker-compose 실행(foregrdoun로 동작함)
 ```
-$ docker-compose up
-```
+$ docker-compose up #docker compose가 실행 되지 않는 경우 하단 참조
 
-- docker compose가 실행 되지 않는다면?
-```
-하단 참조
 ```
 
 - docker container 실행(새로운 탭)

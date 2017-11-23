@@ -105,6 +105,9 @@ $ docker ps -a
 
 ## 도커 파이썬 환경
 - python version: 3.5
+```
+$ python3.5 -V
+```
 
 ## 데이터 베이스 환경
 - postgresq versionl: 9.3.17
@@ -120,10 +123,12 @@ $ psql --version
 ```
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 ```
+
 - 권한 부여
 ```
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
+
 - 버전 확인
 ```
 $ docker-compose --version

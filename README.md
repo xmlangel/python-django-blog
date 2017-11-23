@@ -11,6 +11,26 @@
 create database blog;
 ```
 
+## 서버/프론트 도메인 설정
+```
+$ vi /etc/hosts
+
+파일에 다음 내용을 추가한다.
+
+
+[FRONT_END_SERVER_IP]    api.[FRONT_END_SERVER_IP]
+
+예)
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+210.122.2.85    api.210.122.2.85
+
+```
 
 ## 애플리케이션 서버 띄우기 - 도커 활용
 - 코드 받기
@@ -54,26 +74,6 @@ $ python3.5 manage.py migrate
 $ python3.5 manage.py createsuperuser
 ```
 
-- 도메인 설정
-```
-$ vi /etc/hosts
-
-파일에 다음 내용을 추가한다.
-
-
-[FRONT_END_SERVER_IP]    api.[FRONT_END_SERVER_IP]
-
-예)
-# localhost is used to configure the loopback interface
-# when the system is booting.  Do not change this entry.
-##
-127.0.0.1       localhost
-255.255.255.255 broadcasthost
-::1             localhost
-
-210.122.2.85    api.210.122.2.85
-
-```
 
 - 웹 접속(브라우저에서 확인)
 ```

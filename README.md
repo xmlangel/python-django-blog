@@ -1,13 +1,14 @@
 # Django Blog Application
 
 ## 소개
-- 해당 샘플 앱은 도커로 (nginx / backend / frontend) 이미지 및 컨테이너가 자동 생성 됩니다.
-- 설치를 완료하면 다음과 같이 도커 이미지와 컨테이너를 확인 할 수 있습니다.
+- 해당 샘플 앱은 도커로 nginx / backend / frontend 이미지 및 컨테이너가 자동 생성 됩니다.
+- 설치를 완료하면 도커 이미지와 컨테이너를 확인 할 수 있습니다. (하단 참)
 
 ## 데이터 베이스 초기 설정
 - Default DatabaseName: blog
+- 데이터 베이스 생성 쿼리는 다음과 같습니다.
 ```
-create database blog; #데이터 베이스 생성 쿼리
+create database blog;
 ```
 
 
@@ -33,43 +34,14 @@ USER=XXXX
 PASSWORD=XXXX
 ```
 
-- docker-compose 실행(foregrdoun로 동작함)
+- docker-compose 실행(foreground로 동작함)
 ```
 $ docker-compose up #docker compose가 실행 되지 않는 경우 하단 참조
-
 ```
 
 - docker container 실행(새로운 탭)
 ```
 $ docker exec -i -t backend /bin/bash
-```
-
-- 데이터 베이스 설정 변경
-```
-vi config/env
-
-HOST=
-NAME=blog
-USER=
-PASSWORD=
-
-
-파일: ~/django-blog/backend/backend/settings.py
-에서 다음 데이터 베이스 설정을 변경한다.
-        'HOST': 'DB Server IP',
-        'NAME': 'blog',
-        'PASSWORD': 'pass'
-
-ex)
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
-        'NAME': 'blog',
-        'USER': 'root',
-        'PASSWORD': 'pass'
-    },
-}
 ```
 
 - 데이터 베이스 마이그레이트
@@ -84,15 +56,14 @@ $ python3.5 manage.py createsuperuser
 
 - 도메인 설정
 ```
-파일: /etc/hosts
-에 다음 내용을 추가한다.
+$ vi /etc/hosts
+
+파일에 다음 내용을 추가한다.
 
 
 [FRONT_END_SERVER_IP]    api.[FRONT_END_SERVER_IP]
 
 예)
-# Host Database
-#
 # localhost is used to configure the loopback interface
 # when the system is booting.  Do not change this entry.
 ##

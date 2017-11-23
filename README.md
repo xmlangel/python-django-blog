@@ -1,16 +1,20 @@
 # Django Blog Application
 
-## 기본 환경
-- python version: 3.4
+## 소개
+해당 샘플 앱은 도커로 (nginx / backend / frontend) 이미지 및 컨테이너가 자동 생성 됩니다.
+설치를 완료하면 다음과 같이 도커 이미지와 컨테이너를 확인 할 수 있습니다.
+- docker 이미지 확인
 ```
-$ python -V
-```
-
-- postgresq versionl: 9.3.17
-```
-$ psql --version
+$ docker images
 ```
 
+- docker 컨테이너 확인
+```
+$ docker ps -a
+```
+
+
+## 데이터 베이스 초기 설정
 - default DatabaseName: blog
 ```
 $ create database blog;
@@ -27,7 +31,6 @@ $ git clone git@github.com:whatapdev/python-django-blog.git
 $ docker-compose up
 ```
 
-
 - docker compose가 실행 되지 않는다면?
 ```
 하단 참조
@@ -37,7 +40,6 @@ $ docker-compose up
 ```
 $ docker exec -i -t backend /bin/bash
 ```
-
 
 - 데이터 베이스 설정 변경
 ```
@@ -109,11 +111,19 @@ WHATAP_HOME: /home/blog/backend/whatap
 ```
 
 
+## 도커 파이썬 환경
+- python version: 3.5
 
+## 데이터 베이스 환경
+- postgresq versionl: 9.3.17
+```
+$ psql --version
+```
 
 ## 문제 해결
 
 ### docker compose가 실행 되지 않는다면?
+
 #### 설치
 ```
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose

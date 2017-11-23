@@ -116,15 +116,15 @@ $ psql --version
 
 ### docker compose가 실행 되지 않는다면?
 
-#### 설치
+- 설치
 ```
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 ```
-#### 권한
+- 권한 부여
 ```
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
-#### 버전 확인
+- 버전 확인
 ```
 $ docker-compose --version
 ```

@@ -7,8 +7,9 @@
 ## 데이터 베이스 초기 설정
 - Default DatabaseName: blog
 ```
-$ create database blog;
+create database blog; #데이터 베이스 생성 쿼리
 ```
+
 
 ## 애플리케이션 서버 띄우기 - 도커 활용
 - 코드 받기
@@ -19,6 +20,17 @@ $ git clone https://github.com/whatap/python-django-blog.git
 - 작업 디렉토리로 이동
 ```
 $ cd python-django-blog
+```
+
+- 데이터 베이스 설정 변경
+```
+$ vi ./backend/config/env
+
+파일에서 다음 설정을 변경합니다.
+HOST=XXXX
+NAME=blog
+USER=XXXX
+PASSWORD=XXXX
 ```
 
 - docker-compose 실행(foregrdoun로 동작함)
@@ -34,6 +46,14 @@ $ docker exec -i -t backend /bin/bash
 
 - 데이터 베이스 설정 변경
 ```
+vi config/env
+
+HOST=
+NAME=blog
+USER=
+PASSWORD=
+
+
 파일: ~/django-blog/backend/backend/settings.py
 에서 다음 데이터 베이스 설정을 변경한다.
         'HOST': 'DB Server IP',

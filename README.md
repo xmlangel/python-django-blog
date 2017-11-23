@@ -80,7 +80,7 @@ $ python3.5 manage.py createsuperuser
 http://[FRONT_END_SERVER_IP]/
 ```
 
-- 와탭 에이전트 실
+- 와탭 에이전트 실행
 ```
 whatap agent를 미리 설정 해 두었습니다.
 WHATAP_HOME: /home/blog/backend/whatap

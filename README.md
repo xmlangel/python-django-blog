@@ -1,8 +1,8 @@
 # Django Blog Application
 
 ## 소개
-해당 샘플 앱은 도커로 (nginx / backend / frontend) 이미지 및 컨테이너가 자동 생성 됩니다.
-설치를 완료하면 다음과 같이 도커 이미지와 컨테이너를 확인 할 수 있습니다.
+- 해당 샘플 앱은 도커로 (nginx / backend / frontend) 이미지 및 컨테이너가 자동 생성 됩니다.
+- 설치를 완료하면 다음과 같이 도커 이미지와 컨테이너를 확인 할 수 있습니다.
 
 ## 데이터 베이스 초기 설정
 - default DatabaseName: blog

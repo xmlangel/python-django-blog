@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e42b1c24adc3a138e74f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9780f4630adc01e73024"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -48576,7 +48576,7 @@
 	var CREATE_SUBSCRIBER = exports.CREATE_SUBSCRIBER = 'CREATE_SUBSCRIBER';
 
 	var host = window.location.host.split(':')[0];
-	var ROOT_URL = exports.ROOT_URL = 'http://' + host + ':8000/api/v1';
+	var ROOT_URL = exports.ROOT_URL = 'http://api.' + host + '/api/v1';
 
 	function fetchPosts(filter) {
 				var posts_url = ROOT_URL + '/posts/';
@@ -105836,7 +105836,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var host = window.location.host.split(':')[0];
-	var ROOT_URL = exports.ROOT_URL = 'http://' + host + ':8000/api/v1';
+	var ROOT_URL = exports.ROOT_URL = 'http://api.' + host + '/api/v1';
 
 	function signinUser(_ref) {
 				var username = _ref.username,

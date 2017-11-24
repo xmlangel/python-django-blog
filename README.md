@@ -6,6 +6,8 @@
 - 설치를 완료하면 도커 이미지와 컨테이너를 확인 할 수 있습니다. (하단 참)
 
 ## 데이터 베이스 초기 설정
+postgresql DB는 설치후 아래 DB 를 생성해줍니다.
+
 - Default DatabaseName: blog
 - 데이터 베이스 생성 쿼리는 다음과 같습니다.
 ```
@@ -33,6 +35,10 @@ NAME=blog
 USER=XXXX
 PASSWORD=XXXX
 ```
+* Host : postgresql DB host정보
+* NAME : db name
+* User : DB useer
+* Password : DB password
 
 - docker-compose 실행(foreground로 동작함)
 ```

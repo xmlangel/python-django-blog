@@ -1,6 +1,7 @@
 # Django Blog Application
 
 ## 소개
+- Python + Djnago(Web Framework) + postgresql(DB) + uwsgi / nginx / supervisor
 - 해당 샘플 앱은 도커로 nginx / backend / frontend 이미지 및 컨테이너가 자동 생성 됩니다.
 - 설치를 완료하면 도커 이미지와 컨테이너를 확인 할 수 있습니다. (하단 참)
 
@@ -9,27 +10,6 @@
 - 데이터 베이스 생성 쿼리는 다음과 같습니다.
 ```
 create database blog;
-```
-
-## 서버/프론트 도메인 설정
-```
-$ vi /etc/hosts
-
-파일에 다음 내용을 추가한다.
-
-
-[FRONT_END_SERVER_IP]    api.[FRONT_END_SERVER_IP]
-
-예)
-# localhost is used to configure the loopback interface
-# when the system is booting.  Do not change this entry.
-##
-127.0.0.1       localhost
-255.255.255.255 broadcasthost
-::1             localhost
-
-210.122.2.85    api.210.122.2.85
-
 ```
 
 ## 애플리케이션 서버 띄우기 - 도커 활용
@@ -75,10 +55,36 @@ $ python3.5 manage.py createsuperuser
 ```
 
 
+## 브라우저에서 확인
+
 - 웹 접속(브라우저에서 확인)
 ```
 http://[FRONT_END_SERVER_IP]/
 ```
+
+- 도메인을 다음과 같이 설정 해야만 확인이 가능하다.
+```
+$ vi /etc/hosts
+
+파일에 다음 내용을 추가한다.
+
+
+[FRONT_END_SERVER_IP]    api.[FRONT_END_SERVER_IP]
+```
+
+```
+예)
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+210.122.2.85    api.210.122.2.85
+
+```
+
 
 - 와탭 에이전트 실행
 ```
@@ -133,8 +139,6 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 $ docker-compose --version
 ```
-
-
 
 
 ## 참고
